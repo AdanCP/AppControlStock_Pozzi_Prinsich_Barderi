@@ -1,0 +1,50 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block Contenido_cambiante %}
+
+
+<h1 class="display-5 fw-bolder text-black mb-2"> Se agregó con éxito </h1>
+<div class="card-header" style="background-color: rgba(244, 244, 136, 0.957);">
+  <h4>Existencias actuales de software</h4>
+</div>
+
+
+
+       
+    <table class="table table-sm">
+        
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        {% for soft in Software %}
+        <tbody>
+          <tr>
+            <th scope="row">{{soft.id}}</th>
+            <td>{{soft.tipo_software}}</td>
+            <td>{{soft.marca_software}}</td>
+            <td>{{soft.stock_software}}</td>
+          </tr>
+        
+        </tbody>
+        {% endfor %}
+    </table>
+    
+    
+      
+    
+
+
+
+
+
+<a class="btn btn-secondary btn-lg px-4 me-sm-3" href="{% url 'Software'%}">Agregar otro</a>
+
+
+{% endblock %}
