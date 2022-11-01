@@ -1,0 +1,1 @@
+# AppControlStock_Pozzi_Prinsich_Barderi
